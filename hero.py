@@ -1,7 +1,7 @@
 import pygame
 
 class MainCharacter():
-    def __init__(self, image, superhero=None):
-        self.image = pygame.image.load(superhero.png)
+    def __init__(self, image):
+        self.image = pygame.image.load("C:\Пользователи\danil\PycharmProjects\Space_Invaders_for_OOP\Image")
 
 
