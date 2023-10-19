@@ -2,7 +2,7 @@ import pygame
 
 class MainCharacter():
     def __init__(self, screen):
-        self.image = pygame.image.load("51156777.png")
+        self.image = pygame.image.load("Image/hero.png")
         self.screen = screen
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
@@ -16,8 +16,8 @@ class MainCharacter():
         self.screen.blit(self.image, self.rect)
     def moving(self):
         if self.move_right and self.rect.right < self.screen_rect.right:
-            self.rect.centerx += 1
+            self.rect.centerx += 10
         elif self.move_left and self.rect.left > 0:
-            self.rect.centerx -= 1
+            self.rect.centerx -= 10
 
 
