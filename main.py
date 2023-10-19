@@ -16,6 +16,21 @@ def start_game():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_d:
                     maincharacter.rect.centerx += 1
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_d:
+                    maincharacter.move_right = True
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_d:
+                    maincharacter.move_right = False
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_a:
+                    maincharacter.rect.centerx -= 1
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_a:
+                    maincharacter.move_left = True
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_a:
+                    maincharacter.move_left = False
 
         maincharacter.output()
         pygame.display.flip()

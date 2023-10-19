@@ -2,7 +2,7 @@ import pygame
 
 class MainCharacter():
     def __init__(self, screen):
-        self.image = pygame.image.load("51156777.png")
+        self.image = pygame.image.load("Image/hero.png")
         self.screen = screen
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
