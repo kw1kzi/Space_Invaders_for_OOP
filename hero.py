@@ -1,8 +1,8 @@
 import pygame
 
 class MainCharacter():
-    def __init__(self, screen):
-        self.image = pygame.image.load("Image/hero.png")
+    def init(self, screen):
+        self.image = pygame.image.load("Images/hero.png")
         self.screen = screen
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
@@ -19,5 +19,4 @@ class MainCharacter():
             self.rect.centerx += 10
         elif self.move_left and self.rect.left > 0:
             self.rect.centerx -= 10
-
 

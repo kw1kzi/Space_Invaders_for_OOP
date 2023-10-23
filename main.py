@@ -6,7 +6,7 @@ def start_game():
     pygame.init()
     screen = pygame.display.set_mode((1000,800))
     pygame.display.set_caption("SpaceX by Karachevtsev")
-    maincharacter = MainCharacter(screen)
+    maincharacter = MainCharacter()
 
     flag = True
     while flag:
@@ -34,6 +34,4 @@ def start_game():
 
         maincharacter.output()
         pygame.display.flip()
-
-
 start_game()
