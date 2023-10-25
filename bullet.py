@@ -2,16 +2,65 @@ import pygame
 
 
 class Bullet(pygame.sprite.Sprite):
-    def __init__(self, x, y):
-        pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.Surface((10, 20))
-        self.rect = self.image.get_rect()
-        self.rect.bottom = y
-        self.rect.centerx = x
-        self.speedy = -10
+    def __init__(self, screen, mainbullet):
+        super(Bullet, self)._init_()
+        self.screen = screen
+        self.rect = pygame.Rect(0, 0, 5, 10)
+        self.color = 255,255,255
+        self.rect.centerx = mainbullet.rect.centerx
+        self.rect.top = mainbullet.rect.top
+        self.speed = 5.1
+        self.y = float(self.rect.y)
 
-    def update(self):
-        self.rect.y += self.speedy
-        # убить, если он заходит за верхнюю часть экрана
-        if self.rect.bottom < 0:
-            self.kill()
+    def draw_bullet(self):
+        pygame.draw.rect(self.screen, self.color, self.rect)
+
+
+
+    def update_bullet(self):
+        self.y = self.speed
+        self.rect.y = self.y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
