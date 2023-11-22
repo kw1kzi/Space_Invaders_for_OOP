@@ -1,4 +1,4 @@
-mport pygame
+import pygame
 
 class Bullet(pygame.sprite.Sprite):
 
@@ -13,8 +13,10 @@ class Bullet(pygame.sprite.Sprite):
         self.y = float(self.rect.y)
 
     def update(self):
+        """перемещение пули вверх"""
         self.y -= self.speed
         self.rect.y = self.y
 
     def draw_bullet(self):
+        '''отрисовка пуль через спрайты'''
         pygame.draw.rect(self.screen, self.color, self.rect)
